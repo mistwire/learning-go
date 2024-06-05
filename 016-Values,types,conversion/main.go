@@ -26,6 +26,5 @@ func main() {
 		// you CAN re-cast (convert) it as a float64 
 		// https://go.dev/ref/spec#Conversions
 		z = float64(m)
-		fmt.Printf("%v of type %T \n", z, z)
-	
+		fmt.Printf("%v of type %T \n", z, z)	
 }
