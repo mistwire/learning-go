@@ -15,13 +15,11 @@ package main
 import "fmt"
 
 func main() {
-	my_string := "Chris Williams"
-	fmt.Printf("%v is of type %T\n", my_string, my_string)
-
 	my_int := 42
-	fmt.Printf("%v is of type %T\n", my_int, my_int)
-
+	my_string := "Chris Williams"
 	my_float64 := 42.00001
+	
+	fmt.Printf("%v is of type %T\n", my_string, my_string)
+	fmt.Printf("%v is of type %T\n", my_int, my_int)
 	fmt.Printf("%v is of type %T\n", my_float64, my_float64)
-
 }
