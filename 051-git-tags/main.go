@@ -1,5 +1,7 @@
 package main
 
-func main(){
-	fmt.println("Working on versions") 
+import "fmt"
+
+func main() {
+	fmt.Println("Working on versions")
 }
