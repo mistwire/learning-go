@@ -6,7 +6,6 @@
 // ● build your program for linux
 // 	○ GOOS=linux GOARCH=amd64 go build -o myapp-linux
 
-
 package main
 
 import "fmt"

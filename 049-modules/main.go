@@ -11,10 +11,12 @@ func main() {
 	string1 := puppy.Bark()
 	string2 := puppy.Barks()
 	
+	puppy.From11()
 	fmt.Println(string1)
 	fmt.Println(string2)
 	
 	// BigBark(s) comes from indirect module dependency:
+	puppy.From12()
 	string3 := puppy.BigBark()
 	string4 := puppy.BigBarks()
 
@@ -25,7 +27,8 @@ func main() {
 	fmt.Println("also can print this way:")
 	fmt.Println(string1, string2) // notice no newline
 
-	fmt.Println("also this way:")
+	puppy.From13()
+	fmt.Println("Printing a call to the func, no var:")
 	fmt.Println(puppy.Bark())
 	fmt.Println(puppy.Barks())
 
