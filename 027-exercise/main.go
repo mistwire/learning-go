@@ -1,25 +1,28 @@
-/*
-Write a program that uses the following:
-- for a var storing a value of type:
-	- string
-	- int
-	- float64
-- use print verbs (https://pkg.go.dev/fmt) to show:
-	- value
-	- type
-*/
-
-
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	my_int := 42
-	my_string := "Chris Williams"
-	my_float64 := 42.00001
-	
-	fmt.Printf("%v is of type %T\n", my_string, my_string)
-	fmt.Printf("%v is of type %T\n", my_int, my_int)
-	fmt.Printf("%v is of type %T\n", my_float64, my_float64)
+	// ● var for zero value
+	var x int
+	fmt.Println(x)
+
+	// ● short declaration operator
+	y := 42
+	fmt.Println(y)
+
+	// ● multiple initializations
+	a, b := 43, "Your Mom"
+	fmt.Println(a, b)
+
+	// ● var when specificity is required
+	var c uint32 = 1231342343
+	fmt.Printf("%v is of type %T\n", c, c)
+
+	// ● blank identifier
+	e, f, _ := 45, 46, 47
+	fmt.Println(e, f)
+
 }

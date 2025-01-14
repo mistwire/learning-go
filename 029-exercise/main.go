@@ -1,18 +1,23 @@
-/* https://go.dev/ref/spec#Numeric_types 
-write a program that declares 2 variables:
-- one var to store a value of type int8
-	- assign it to the largest possible number then print it
-- one var to store the value of type uint8
-	- assign it to the largest possible number then print it
-*/
+// write a program that uses print verbs to show the following numbers
+// ● 747
+// ● 911
+// ● 90210
+// as
+// ● decimal
+// ● binary
+// ● hexadecimal
 
 package main
 
 import "fmt"
 
-func main(){
-	var x int8 = 127
-	var y uint8 = 255
-	fmt.Printf("%v is of type %T\n",x, x)
-	fmt.Printf("%v is of type %T\n",y, y)
+func main() {
+	a := 747
+	b := 911
+	c := 90210
+
+	fmt.Printf("decimal: %v\t binary: %#b\t\t hex: %#x\n",a, a, a)
+	fmt.Printf("decimal: %v\t binary: %#b\t\t hex: %#x\n",b, b, b)
+	fmt.Printf("decimal: %v\t binary: %#b\t hex: %#x\n",c, c, c)
+
 }
