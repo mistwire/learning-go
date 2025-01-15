@@ -24,7 +24,7 @@ func main() {
 	fmt.Println(y)
 
 	p1 := person{
-		"James",
+		"Chris",
 	}
 	p1.sayHello()
 
