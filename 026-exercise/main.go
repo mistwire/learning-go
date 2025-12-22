@@ -1,8 +1,8 @@
 /*
 Write a program that uses the following:
 - var for zero value
-- short declaration operator 
-- multiple initializations 
+- short declaration operator
+- multiple initializations
 - var when specificity is required
 - blank identifier
 */
@@ -11,13 +11,13 @@ package main
 import "fmt"
 
 func main() {
-	
+
 	// var for zero value
 	var a int
 	fmt.Println(a)
 
 	// short declaration operator
-	b := 69 // nice 
+	b := 69 // nice
 	fmt.Println(b)
 
 	// multiple initializations
@@ -29,6 +29,6 @@ func main() {
 	fmt.Printf("%v is of type %T \n", e, e)
 
 	// blank identifier
-	f, g, _ := 45, 46, 47 
+	f, g, _ := 45, 46, 47
 	fmt.Println(f, g)
 }

@@ -7,7 +7,7 @@ type ByteSize int
 const (
 	_           = iota // ignore first value by assigning to blank identifier
 	KB ByteSize = 1 << (10 * iota)
-	MB 
+	MB
 	GB
 	TB
 	PB
@@ -16,7 +16,7 @@ const (
 	// YB
 )
 
-func main() { // go formatting verbs: https://pkg.go.dev/fmt 
+func main() { // go formatting verbs: https://pkg.go.dev/fmt
 	fmt.Printf("%d \t\t\t %b\n", KB, KB)
 	fmt.Printf("%d \t\t %b\n", MB, MB)
 	fmt.Printf("%d \t\t %b\n", GB, GB)

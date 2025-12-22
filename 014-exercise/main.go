@@ -17,6 +17,5 @@ func main() {
 	fmt.Printf("%b %x \n", d, d)
 	fmt.Printf("%b %x \n", e, e)
 	fmt.Printf("%b %x \n", f, f)
-	// _ is a throwaway & doesn't bork the compiler 
+	// _ is a throwaway & doesn't bork the compiler
 }
-

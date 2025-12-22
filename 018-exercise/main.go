@@ -1,23 +1,24 @@
-// the Go tour - https://go.dev/tour 
+// the Go tour - https://go.dev/tour
 
 package main
 
-import(
+import (
 	"fmt"
-	"math/rand"
 	"math/cmplx"
+	"math/rand"
 )
 
 // The var statement declares a list of variables; as in function argument lists, the type is last.
 var c, python, java bool
+
 const d int = 42
-// A const statement can appear anywhere a var statement can. 
+
+// A const statement can appear anywhere a var statement can.
 // They cannot be declared using the := syntax.
 const Pi = 3.14
 
 // A var declaration can include initializers, one per variable.
 var i, j int = 1, 2
-
 
 func add(x int, y int) int {
 	return x + y
@@ -27,7 +28,7 @@ func swap(x, y string) (string, string) {
 	return y, x
 }
 
-// return values may be named 
+// return values may be named
 func split(sum int) (x, y int) {
 	x = sum * 4 / 9
 	y = sum - x
@@ -48,7 +49,7 @@ const (
 	Small = Big >> 99
 )
 
-func needInt(x int) int { 
+func needInt(x int) int {
 	return x*10 + 1
 }
 func needFloat(x float64) float64 {

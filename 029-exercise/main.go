@@ -16,8 +16,8 @@ func main() {
 	b := 911
 	c := 90210
 
-	fmt.Printf("decimal: %v\t binary: %#b\t\t hex: %#x\n",a, a, a)
-	fmt.Printf("decimal: %v\t binary: %#b\t\t hex: %#x\n",b, b, b)
-	fmt.Printf("decimal: %v\t binary: %#b\t hex: %#x\n",c, c, c)
+	fmt.Printf("decimal: %v\t binary: %#b\t\t hex: %#x\n", a, a, a)
+	fmt.Printf("decimal: %v\t binary: %#b\t\t hex: %#x\n", b, b, b)
+	fmt.Printf("decimal: %v\t binary: %#b\t hex: %#x\n", c, c, c)
 
 }
