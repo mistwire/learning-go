@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 const (
-	_ = iota // _ == 0
+	_ = iota // _ == 0   https://go.dev/wiki/Iota
 	a        // a == 1
 	b        // b == 2
 	c        // c == 3
