@@ -10,7 +10,10 @@ package main
 // the imported package "fmt"
 // is in the "file block" scope
 // of this file
-import "fmt"
+import (
+	"fmt"
+	"learning-go/033-scope/furtherexploredgo"
+)
 
 // x is in "package block" scope
 var x = 42
@@ -37,10 +40,12 @@ func main() {
 
 	// variable "shadowing"
 	x := 32
-	fmt.Println(x)
+	fmt.Println("Variable Shadowed x:", x)
 
 	// package block x is still the same
 	printMe()
+
+	furtherexploredgo.Fasincating()
 
 	//also good to know
 
@@ -57,7 +62,7 @@ func main() {
 
 func printMe() {
 	//x can be accessed here
-	fmt.Println(x)
+	fmt.Printf("Package block scope x: %d\n", x)
 }
 
 // type person is in "package block" scope
