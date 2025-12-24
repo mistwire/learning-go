@@ -1,8 +1,6 @@
 github.com/mistwire/dog v0.0.0-20240803222524-fde449078097 h1:HrKDpNN9m4xRbg6+d4qweii+NeU2L0KrHwp3FzydS00=
 github.com/mistwire/dog v0.0.0-20240803222524-fde449078097/go.mod h1:eFA2uNjHXIVrvpYeDo9FncRe85cnQnegpk79ZJutX64=
-github.com/mistwire/puppy v0.0.0-20240803222926-d5481133c260 h1:hHwwtz6GJr0yDWK54ryWFATpZmAini1tc6XWj0FXWMw=
-github.com/mistwire/puppy v0.0.0-20240803222926-d5481133c260/go.mod h1:LeRoOMrFsL3HDDl/XIDc2NdPlhtR9IhNlzyTwhQfkNw=
-github.com/mistwire/puppy v1.2.0 h1:9ZWRjYah25xD9l2RcLled/oLbEk0tLhFbXaM7njBykU=
-github.com/mistwire/puppy v1.2.0/go.mod h1:LeRoOMrFsL3HDDl/XIDc2NdPlhtR9IhNlzyTwhQfkNw=
+github.com/mistwire/dog v0.0.1 h1:WDjkRdOkv7fBKGmp6itjkze5ZwvpHZKLkd7BJA/Z8aw=
+github.com/mistwire/dog v0.0.1/go.mod h1:dAthy9fuklOxptD96p2+ibmnqT5WodoPl4kf2B0GKUY=
 github.com/mistwire/puppy v1.3.0 h1:oWcLEcj6Sx0tOpLbmf5MAXbT2W6vBk7+Ae2DTwDGlmc=
 github.com/mistwire/puppy v1.3.0/go.mod h1:LeRoOMrFsL3HDDl/XIDc2NdPlhtR9IhNlzyTwhQfkNw=
