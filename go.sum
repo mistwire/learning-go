@@ -6,3 +6,5 @@ github.com/mistwire/puppy v1.2.0 h1:9ZWRjYah25xD9l2RcLled/oLbEk0tLhFbXaM7njBykU=
 github.com/mistwire/puppy v1.2.0/go.mod h1:LeRoOMrFsL3HDDl/XIDc2NdPlhtR9IhNlzyTwhQfkNw=
 github.com/mistwire/puppy v1.3.0 h1:oWcLEcj6Sx0tOpLbmf5MAXbT2W6vBk7+Ae2DTwDGlmc=
 github.com/mistwire/puppy v1.3.0/go.mod h1:LeRoOMrFsL3HDDl/XIDc2NdPlhtR9IhNlzyTwhQfkNw=
+github.com/mistwire/puppy v1.3.1 h1:W2PVqRY+t0uMDdfY47RFSa5E49JydqEFqThMCslfO3Y=
+github.com/mistwire/puppy v1.3.1/go.mod h1:80bU0gV0G9VnIJYQOPgMntGRu1wcuqiijoSOsVhkNxI=
