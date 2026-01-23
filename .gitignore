@@ -33,9 +33,4 @@ go.work
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 
-.bob # bob build tool
-.bob.json  # bob build tool
-.bobignore # bob build tool
-# IDE
-.idea/
-.vscode/
+.bob/ # bob build tool
