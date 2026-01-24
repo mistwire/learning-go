@@ -1,3 +1,4 @@
+// LESSON: Exercise - SHA-256 checksum verification
 package main
 
 /*

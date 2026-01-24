@@ -1,3 +1,4 @@
+// LESSON: Exercise - array literal with compiler-determined length
 /*
 ● Use an array literal to store these elements in an array and let the compiler determine
 the length of the array, then also print out the array and the length of the array

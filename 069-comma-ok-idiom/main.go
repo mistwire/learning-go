@@ -1,3 +1,4 @@
+// LESSON: Comma-Ok Idiom - statement before condition in if, scoped variables
 package main
 
 import (

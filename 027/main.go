@@ -1,3 +1,4 @@
+// LESSON: Exercise - var zero value, short declaration, multiple init, blank identifier
 /*
 Write a program that uses the following:
 - var for zero value

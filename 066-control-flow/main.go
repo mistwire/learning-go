@@ -1,3 +1,4 @@
+// LESSON: Control Flow Intro - init(), sequence of execution
 package main
 
 import (

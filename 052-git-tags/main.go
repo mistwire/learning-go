@@ -1,3 +1,4 @@
+// LESSON: Git Tags - versioning modules with git tags
 package main
 
 import "fmt"

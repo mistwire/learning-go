@@ -1,3 +1,4 @@
+// LESSON: Variables - short declaration :=, var keyword, blank identifier _, multiple assignment
 package main
 
 import "fmt"

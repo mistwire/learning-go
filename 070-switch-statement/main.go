@@ -1,3 +1,4 @@
+// LESSON: Switch & Select - switch statements, fallthrough, select for channels
 package main
 
 import (

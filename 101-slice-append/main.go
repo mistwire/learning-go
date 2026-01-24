@@ -1,3 +1,4 @@
+// LESSON: Slice Append - append() builtin for growing slices dynamically
 package main
 
 import "fmt"

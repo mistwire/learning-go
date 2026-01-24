@@ -1,3 +1,4 @@
+// LESSON: Slices - dynamic arrays, internal structure (len, cap, pointer)
 package main
 
 import "fmt"

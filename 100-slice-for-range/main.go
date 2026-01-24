@@ -1,3 +1,4 @@
+// LESSON: Slice For-Range - iterating slices, blank identifier _, index access
 package main
 
 import "fmt"

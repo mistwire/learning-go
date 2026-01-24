@@ -1,3 +1,4 @@
+// LESSON: Exercise - slice literal with for-range loop
 /*
 ● Use a slice literal to store these elements in a slice, then also print out the slice and the
 length of the slice.

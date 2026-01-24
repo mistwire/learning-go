@@ -1,3 +1,4 @@
+// LESSON: Scope - package/block scope, variable shadowing, type definitions, methods
 /*
 THIS IS ONLY SOME OF THE CODE SHOWN IN THE LECTURE
 ALL OF THE CODE SHOWN IN THE LECTURE IS AVAILABLE ON

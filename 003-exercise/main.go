@@ -1,3 +1,4 @@
+// LESSON: Basics - comments, packages, imports, constants, fmt.Printf verbs, raw strings
 // Comments go in like this
 /*
 Or like this

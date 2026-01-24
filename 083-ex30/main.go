@@ -1,3 +1,4 @@
+// LESSON: Exercise - for loop with conditional switch
 /*
 ● Create one random int between 0 inclusive and 5 exclusive
 	○ assign the value to a variable with the identifier x

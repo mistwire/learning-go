@@ -1,3 +1,4 @@
+// LESSON: Exercise - modulus with continue to print odd numbers
 /*
 ● use modulus and the continue statement in a loop to print all ODD numbers
 ● joke about the programmer and infinite loops

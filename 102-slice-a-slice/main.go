@@ -1,3 +1,4 @@
+// LESSON: Slicing - [inclusive:exclusive] syntax, [:n], [n:], [:]
 package main
 
 import "fmt"

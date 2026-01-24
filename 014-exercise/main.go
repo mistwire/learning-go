@@ -1,3 +1,4 @@
+// LESSON: Number Formatting - binary %b, hexadecimal %x print verbs
 package main
 
 import (

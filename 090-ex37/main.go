@@ -1,3 +1,4 @@
+// LESSON: Exercise - map lookup with comma-ok idiom
 /*
 ● use the code from the previous exercise
 ● add this code to print a single value stored in the map

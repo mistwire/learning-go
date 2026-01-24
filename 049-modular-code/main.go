@@ -1,3 +1,4 @@
+// LESSON: Modular Code - importing and using external packages
 package main
 
 import (

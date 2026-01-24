@@ -1,3 +1,4 @@
+// LESSON: Exercise - for-range loop over slice of ints
 /*
 ● below is the code to create a data structure called a slice of ints
 ● put this code into a program

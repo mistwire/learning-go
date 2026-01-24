@@ -1,3 +1,4 @@
+// LESSON: Logical Operators - && (AND), || (OR), ! (NOT), comparison operators
 package main
 
 import (

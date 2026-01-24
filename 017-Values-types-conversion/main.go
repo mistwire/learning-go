@@ -1,3 +1,4 @@
+// LESSON: Type Conversion - explicit casting between types (e.g., float64(m))
 package main
 
 import (

@@ -1,3 +1,4 @@
+// LESSON: If Statements - if, else if, else conditional branching
 package main
 
 import (

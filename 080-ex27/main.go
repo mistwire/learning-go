@@ -1,3 +1,4 @@
+// LESSON: Exercise - random numbers with if/else if conditions
 /*
 ● Create 2 random ints between 0 inclusive and 10 exclusive
 	○ assign them to variables with the identifiers x and y

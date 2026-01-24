@@ -1,3 +1,4 @@
+// LESSON: Modulus - % operator for remainder, even/odd checking
 package main
 
 import "fmt"

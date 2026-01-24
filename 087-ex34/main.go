@@ -1,3 +1,4 @@
+// LESSON: Exercise - nested loops (5x5 grid)
 /*
 ● create a loop that runs 5 times
 ● nest a loop within the first loop that also prints 5 times

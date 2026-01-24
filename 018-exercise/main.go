@@ -1,3 +1,4 @@
+// LESSON: Go Tour - functions, multiple returns, named returns, zero values, bit shifting
 // the Go tour - https://go.dev/tour
 
 package main

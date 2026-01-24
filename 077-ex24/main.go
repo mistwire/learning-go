@@ -1,3 +1,4 @@
+// LESSON: Exercise - sequential and conditional control flow
 /*
 ● create a program that uses both SEQUENTIAL and CONDITIONAL control flow. Your
 program should do the following

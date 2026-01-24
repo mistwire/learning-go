@@ -1,3 +1,4 @@
+// LESSON: Exercise - decimal %d, binary %b, hexadecimal %#x formatting
 // write a program that uses print verbs to show the following numbers
 // 	● 747
 // 	● 911

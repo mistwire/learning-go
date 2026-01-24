@@ -1,3 +1,4 @@
+// LESSON: Specifying Dependency Versions - pinning specific module versions
 package main
 
 import (

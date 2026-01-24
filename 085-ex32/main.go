@@ -1,3 +1,4 @@
+// LESSON: Exercise - infinite loop with break statement
 /*
 ● create a for loop that uses break statement
 ● increment or decrement the variable being checked as a condition in the loop

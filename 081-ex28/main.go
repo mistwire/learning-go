@@ -1,3 +1,4 @@
+// LESSON: Exercise - refactoring if/else to switch statement
 /*
 ● Modify the previous program to use a switch statement
 */

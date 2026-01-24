@@ -1,3 +1,4 @@
+// LESSON: Exercise - conditional logic with if/switch/select
 /*
 ● Modify the previous program to use one of these conditional logic statements
 

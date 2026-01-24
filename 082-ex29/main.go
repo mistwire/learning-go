@@ -1,3 +1,4 @@
+// LESSON: Exercise - basic for loop printing 0-99
 /*
 there are two parts ot this hands on exercise
 ○ create a program that has a loop that prints every number from 0 to 99

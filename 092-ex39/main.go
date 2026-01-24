@@ -1,3 +1,4 @@
+// LESSON: Exercise - boolean logic truth tables
 /*
 What do these print:
 ● fmt.Println(true && true)

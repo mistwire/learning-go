@@ -1,3 +1,4 @@
+// LESSON: Exercise - int8 (max 127) and uint8 (max 255) numeric limits
 // write a program that declares two variables
 // 	● one variable to store a VALUE of TYPE int8
 // 		○ assign to it the largest number possible, then print it

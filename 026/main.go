@@ -1,3 +1,4 @@
+// LESSON: Custom Types with Iota - ByteSize type for KB, MB, GB, TB, PB, EB constants
 package main
 
 import "fmt"

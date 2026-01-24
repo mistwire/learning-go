@@ -1,3 +1,4 @@
+// LESSON: Exercise - statement;statement idiom in if conditions
 /*
 ● use the "statement statement" idiom to
 

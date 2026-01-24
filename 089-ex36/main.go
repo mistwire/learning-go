@@ -1,3 +1,4 @@
+// LESSON: Exercise - for-range loop over map
 /*
 ● below is the code to create a data structure called a map
 ● put this code into a program

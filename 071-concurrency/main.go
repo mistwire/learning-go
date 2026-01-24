@@ -1,3 +1,4 @@
+// LESSON: Concurrency - goroutines, channels, concurrency vs parallelism, select
 package main
 
 import (

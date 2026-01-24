@@ -1,3 +1,4 @@
+// LESSON: Exercise - print verbs %v and %T for value and type inspection
 //	write a program that uses the following:
 //
 // ● for a VARIABLE storing a VALUE of TYPE

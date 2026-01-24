@@ -1,3 +1,4 @@
+// LESSON: Delete from Slice - using append with slice syntax to remove elements
 package main
 
 import "fmt"

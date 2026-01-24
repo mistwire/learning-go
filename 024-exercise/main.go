@@ -1,3 +1,4 @@
+// LESSON: Bit Shifting - left shift << operator for powers of two
 package main
 
 import "fmt"

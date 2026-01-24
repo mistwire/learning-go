@@ -1,3 +1,4 @@
+// LESSON: Iota - auto-incrementing constants for enumeration
 package main
 
 import "fmt"

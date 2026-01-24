@@ -1,3 +1,4 @@
+// LESSON: Dependency Management - go.mod, external modules with nested dependencies
 package main
 
 import (

@@ -1,3 +1,4 @@
+// LESSON: For-Range Loops - iterating over slices and maps with range
 package main
 
 import (

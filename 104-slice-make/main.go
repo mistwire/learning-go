@@ -1,3 +1,4 @@
+// LESSON: Make - pre-allocating slices with make([]T, len, cap)
 package main
 
 import "fmt"

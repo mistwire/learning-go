@@ -1,3 +1,4 @@
+// LESSON: Arrays - fixed-size, array literals, [...]type syntax, len()
 package main
 
 import "fmt"
