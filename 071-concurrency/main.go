@@ -1,4 +1,11 @@
-// LESSON: Concurrency - goroutines, channels, concurrency vs parallelism, select
+/*
+● CONCURRENCY — goroutines, channels, and select
+● Building on Lesson 070: select is the channel-based counterpart to switch
+● CONCURRENCY vs PARALLELISM:
+  ● Concurrency = DESIGN pattern (structuring code to handle multiple tasks)
+  ● Parallelism = EXECUTION (actually running tasks simultaneously on multiple CPUs)
+● Go's concurrency primitives: goroutines (lightweight threads) + channels (communication)
+*/
 package main
 
 import (
@@ -25,64 +32,64 @@ tasks simultaneously by utilizing multiple CPUs or cores.
 	parts of the program to run in parallel on different processors. In Go, parallelism
 	can be achieved by running multiple goroutines on different processors using the
 	go keyword.
-		■ serial / sequential execution
-			● the opposite of parallel computing
-			● The opposite of code running in parallel is code running serially or
-			sequentially. In sequential execution, each instruction or task is
-			executed one after the other in a predefined order, so that each
-			instruction must wait for the previous one to finish before it can
-			start. This differs from parallel execution, where multiple
-			instructions or tasks can be executed simultaneously. Sequential
-			execution is typically used when the instructions or tasks are
-			dependent on each other, or when the resources required to
-			execute the code are limited. Parallel execution, on the other
-			hand, is used to speed up the execution of code by running
-			Todd McLeod - Learn To Code Go - Page 48
-			multiple instructions or tasks at the same time, often on multiple
-			processors or cores.
 ● Go makes it easy to write concurrent code using goroutines and channels.
 */
 
 func main() {
-	// CONDITIONAL
-	// if statements
-	// switch statements
-
-	// concurrency
-	// select a channel
-
+	// make(chan int) creates an UNBUFFERED channel — send blocks until a receiver is ready
 	ch1 := make(chan int)
 	ch2 := make(chan int)
 
-	// get an int64, convert it to type time.Duration, then use it in time.Sleep
-	// Int63n returns an int64
-	// type duration's underlying type is int64
-	// time.Sleep takes type duration
-	// time.Millisecond is a constant in the time package
-	// https://pkg.go.dev/time#pkg-constants
+	// TYPE CONVERSION (Lesson 017): int64 → time.Duration
+	// time.Duration's underlying type is int64
 	d1 := time.Duration(rand.Int63n(250))
 	d2 := time.Duration(rand.Int63n(250))
-	// fmt.Printf("%v \t %T\n", d1, d1)
-	// time.Sleep(d1 * time.Millisecond)
-	// fmt.Println("Done")
 
+	// GOROUTINE: "go" keyword launches a function concurrently
+	// "go func() { ... }()" is an anonymous function launched as a goroutine
+	// the () at the end immediately invokes it
 	go func() {
 		time.Sleep(d1 * time.Millisecond)
-		ch1 <- 41
+		ch1 <- 41 // SEND: pushes 41 into ch1
 	}()
 
 	go func() {
 		time.Sleep(d2 * time.Millisecond)
-		ch2 <- 42
+		ch2 <- 42 // SEND: pushes 42 into ch2
 	}()
 
-	// A "select" statement chooses which of a set of possible send or receive operations will proceed.
-	// It looks similar to a "switch" statement but with the cases all referring to communication operations.
+	// SELECT: blocks until one channel operation can proceed
+	// whichever goroutine finishes sleeping first "wins"
 	// https://go.dev/ref/spec#Select_statements
 	select {
-	case v1 := <-ch1:
+	case v1 := <-ch1: // RECEIVE: pulls a value from ch1
 		fmt.Println("value from channel 1", v1)
-	case v2 := <-ch2:
+	case v2 := <-ch2: // RECEIVE: pulls a value from ch2
 		fmt.Println("value from channel 2", v2)
 	}
 }
+
+/*
+REMARKS:
+- GOROUTINES are NOT OS threads — they're multiplexed onto threads by the Go runtime
+  ● Start with ~2KB stack (threads start with ~1MB)
+  ● You can run thousands/millions of goroutines
+  ● Launched with the "go" keyword: go myFunction()
+- CHANNELS are typed conduits for goroutine communication
+  ● ch := make(chan int) — unbuffered (send blocks until receive, and vice versa)
+  ● ch := make(chan int, 10) — buffered (send only blocks when buffer is full)
+  ● ch <- value — send into channel
+  ● value := <-ch — receive from channel
+- SELECT (from Lesson 070): multiplexes across multiple channels
+  ● Blocks until at least one case can proceed
+  ● If multiple are ready, picks one at random
+  ● "default" case makes select non-blocking
+- KEY DISTINCTION:
+  ● Concurrency = dealing with many things at once (structure/design)
+  ● Parallelism = doing many things at once (execution)
+  ● "Concurrency is about structure, parallelism is about execution" — Rob Pike
+- BUILDING ON LESSON 066: concurrency breaks the sequential execution model
+  — goroutines may execute in any order
+- Go's mantra: "Do not communicate by sharing memory; share memory by communicating"
+  — channels are safer than shared variables with mutexes
+*/

@@ -1,35 +1,27 @@
-// LESSON: Switch & Select - switch statements, fallthrough, select for channels
+/*
+● SWITCH & SELECT — multi-way branching and channel selection
+● Building on Lesson 067-068: switch is a cleaner alternative to long if/else-if chains
+● TWO forms: expression switch (switch x) and "variable-less" switch (switch {})
+● Go switch does NOT fall through by default (opposite of C/Java)
+● SELECT is like switch but for CHANNEL operations (concurrency preview)
+● This is a comprehensive lesson — also previews for loops (Lesson 072) and
+  for-range (Lesson 074) with slices and maps
+*/
 package main
 
 import (
 	"fmt"
 	"math/rand"
-	"time" 
+	"time"
 )
-
-/*
-A switch statement is a control flow statement in programming that allows a program to evaluate
-an expression or variable and then selectively execute different blocks of code based on the
-value of the expression or variable. It provides a convenient way to write code that performs
-different actions based on a single variable or expression without having to use multiple if/else
-statements. The switch statement typically consists of a single expression or variable followed
-by a series of case statements that specify the different values that the expression or variable
-can take and the corresponding blocks of code to execute in each case. If the expression or
-variable matches one of the specified case values, the corresponding block of code is executed,
-and if none of the cases match, an optional default case can be used to execute a fallback block
-of code.
-https://go.dev/play/p/JuPB00o3YNC
-*/
-
-
-
 
 func main() {
 	x := 40
-	y := 5  // this is the fourth statement to run
+	y := 5
 	fmt.Printf(" x=%v \n y=%v\n", x, y)
 
-	switch { // "variable-less" switch statement
+	// FORM 1: "variable-less" switch — cases are boolean expressions (like if/else-if)
+	switch {
 	case x < 42:
 		fmt.Println("x is LESS THAN 42")
 	case x == 42:
@@ -40,7 +32,8 @@ func main() {
 		fmt.Println("this is the default case for x")
 	}
 
-	switch x { // you can put the variable here as well
+	// FORM 2: expression switch — compares x against each case value
+	switch x {
 	case 40:
 		fmt.Println("x is 40")
 	case 41:
@@ -53,11 +46,13 @@ func main() {
 		fmt.Println("this is the default case for x")
 	}
 
-	// no default fallthrough
+	// FALLTHROUGH: Go does NOT fall through by default (unlike C/Java)
+	// you must explicitly use the "fallthrough" keyword
+	// fallthrough executes the NEXT case's body unconditionally (doesn't check its condition)
 	switch x {
 	case 40:
 		fmt.Println("x is 40")
-		fallthrough
+		fallthrough // falls into case 41's body — but STOPS there (no further fallthrough)
 	case 41:
 		fmt.Println("printed because of fallthrough: x is 41")
 	case 42:
@@ -68,7 +63,7 @@ func main() {
 		fmt.Println("printed because of fallthrough: this is the default case for x")
 	}
 
-	// no default fallthrough
+	// CHAINED FALLTHROUGH: every case with fallthrough cascades into the next
 	switch x {
 	case 40:
 		fmt.Println("x is 40")
@@ -86,37 +81,29 @@ func main() {
 		fmt.Println("printed because of ALL OF THE fallthrough statements: this is the default case for x")
 	}
 
-	// concurrency
-	// switch on channel
+	// --- SELECT STATEMENT (concurrency preview) ---
+	// select is like switch but for CHANNEL operations
 
-	ch1 := make(chan int)
+	ch1 := make(chan int) // unbuffered channel of type int
 	ch2 := make(chan int)
 
+	// type conversion: int64 → time.Duration (Lesson 017 pattern)
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	// get an int64, convert it to type time.Duration, then use it in time.Sleep
-	// Int63n returns an int64
-	// type duration's underlying type is int64
-	// time.Sleep takes type duration
-	// time.Millisecond is a constant in the time package
-	// https://pkg.go.dev/time#pkg-constants
 	d1 := time.Duration(r.Int63n(250))
 	d2 := time.Duration(r.Int63n(250))
-	// fmt.Printf("%v \t %T\n", d1, d1)
-	// time.Sleep(d1 * time.Millisecond)
-	// fmt.Println("Done")
 
+	// GOROUTINES: "go" keyword launches a function in a new lightweight thread
 	go func() {
 		time.Sleep(d1 * time.Millisecond)
-		ch1 <- 41
+		ch1 <- 41 // send 41 into channel 1
 	}()
 
 	go func() {
 		time.Sleep(d2 * time.Millisecond)
-		ch2 <- 42
+		ch2 <- 42 // send 42 into channel 2
 	}()
 
-	// A "select" statement chooses which of a set of possible send or receive operations will proceed.
-	// It looks similar to a "switch" statement but with the cases all referring to communication operations.
+	// SELECT: whichever channel receives a value FIRST wins
 	// https://go.dev/ref/spec#Select_statements
 	select {
 	case v1 := <-ch1:
@@ -125,37 +112,20 @@ func main() {
 		fmt.Println("value from channel 2", v2)
 	}
 
-	// LOOPS / INTERATIVE
-	// for statements
+	// --- FOR LOOPS PREVIEW (detailed in Lessons 072-075) ---
 
-	/*
-		The Go for loop is similar to—but not the same as—C's.
-		It unifies for and while and there is no do-while.
-		There are three forms, only one of which has semicolons.
-
-		// Like a C for
-		for init; condition; post { }
-
-		// Like a C while
-		for condition { }
-
-		// Like a C for(;;)
-		for { }
-
-	*/
-	// https://go.dev/doc/effective_go#for
-
+	// C-style for loop: init; condition; post
 	for i := 0; i < 5; i++ {
 		fmt.Printf("counting to five: %v \t first  for loop\n", i)
 	}
 
+	// while-style: condition only
 	for y < 10 {
 		fmt.Printf("y is %v \t\t\t second for loop\n", y)
 		y++
 	}
 
-	// break
-	// takes you out of the loop
+	// infinite loop with break
 	for {
 		fmt.Printf("y is %v \t\t third  for loop\n", y)
 		if y > 20 {
@@ -164,8 +134,7 @@ func main() {
 		y++
 	}
 
-	// continue
-	// takes to next iteration
+	// continue — skip to next iteration
 	for i := 0; i < 20; i++ {
 		if i%2 != 0 {
 			continue
@@ -181,15 +150,13 @@ func main() {
 		}
 	}
 
-	// for range loop
-	// data structures - slice
+	// for-range over a slice (preview of Lessons 096-108)
 	xi := []int{42, 43, 44, 45, 46, 47}
 	for i, v := range xi {
 		fmt.Println("ranging over a slice", i, v)
 	}
 
-	// for range loop
-	// data structures - map
+	// for-range over a map (preview of Lessons 116-119)
 	m := map[string]int{
 		"James":      42,
 		"Moneypenny": 32,
@@ -199,3 +166,23 @@ func main() {
 	}
 
 }
+
+/*
+REMARKS:
+- SWITCH vs IF/ELSE-IF: switch is cleaner when comparing one value against many cases
+- Go switch does NOT fall through by default — this is the OPPOSITE of C/Java/JavaScript
+  (you don't need "break" at the end of each case)
+- "fallthrough" is rarely used in practice — it unconditionally executes the next case's body
+  WITHOUT checking that case's condition
+- You can have MULTIPLE values in one case: case 40, 41, 42:
+- SELECT is switch for channels:
+    ● Blocks until one case can proceed
+    ● If multiple cases are ready, one is chosen at RANDOM
+    ● Used for multiplexing goroutine communication
+- BUILDING ON LESSON 067: switch replaces long if/else-if chains
+- BUILDING ON LESSON 069: switch can also have an init statement: switch x := f(); { ... }
+- This comprehensive lesson previews many concepts covered individually later:
+    ● For loops (Lesson 072), nested loops (073), for-range (074)
+    ● Slices (098), maps (116)
+    ● Concurrency/goroutines (071)
+*/
