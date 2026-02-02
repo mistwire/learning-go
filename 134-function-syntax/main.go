@@ -1,3 +1,18 @@
+/*
+Syntax of functions in Go
+● func (receiver) identifier(parameters) (returns) { code }
+	○ parameters & arguments
+		■ we define our func with parameters (if any)
+		■ we call our func and pass in arguments (in any)
+● Everything in Go is PASS BY VALUE
+● sample funcs
+	○ no params, no returns
+	○ 1 param, no returns
+	○ 1 param, 1 return
+	○ 2 params, 2 returns
+*/
+
+// func (r receiver) identifier(p parameter(s)) (return(s)) { <your code here> }
 package main
 
 import "fmt"
@@ -28,17 +43,5 @@ func aloha(s string) string {
 
 func dogYears(name string, age int) (string, int) {
 	age *= 7
-	return fmt.Sprint(name, " is this old in dog years "), age
+	return fmt.Sprint(name, " is this old in dog years:"), age
 }
-
-// func (r receiver) identifier(p parameter(s)) (return(s)) { <your code here> }
-
-/*
-
-func syntax
-
-no params, no returns
-1 param, no returns
-1 param, 1 return
-2 params, 2 returns
-*/

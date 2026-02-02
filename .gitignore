@@ -34,3 +34,6 @@ go.work
 .com.apple.timemachine.donotpresent
 
 .bob/ # bob build tool
+
+# Claude Code local settings (personal permissions)
+.claude/settings.local.json

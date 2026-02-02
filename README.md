@@ -26,6 +26,9 @@ Each lesson file includes inline annotations and a `REMARKS` section at the bott
 | 116-119 | Maps | `map[K]V`, `make`, `for-range`, `delete()`, comma-ok idiom `v, ok := m[key]` |
 | 121-124 | Exercises | map operations, word counting |
 | 125-127 | Structs | named types, embedded structs (composition), anonymous structs, field promotion, shadowing |
+| 129-132 | Struct Exercises | structs with slice fields, `map[string]struct`, embedded structs, anonymous structs with composite fields |
+| 133-134 | Function Syntax | `func`, parameters vs arguments, returns, multiple return values, named returns, pass by value |
+| 135-136 | Variadic & Unfurling | `...Type`, variadic as slice, unfurling slices `slice...`, `fmt.Println` is variadic |
 
 ## Running Examples
 
