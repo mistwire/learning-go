@@ -42,11 +42,13 @@ func main() {
 
 	// NESTED RANGE: outer loop ranges over the map, inner loop over the slice field
 	for _, v := range m {
-		fmt.Println(v) // prints the entire person struct
+		fmt.Println(v.first, v.last) // prints the entire person struct
 		for _, v2 := range v.favIceCream {
 			fmt.Println(v.first, v2) // accesses struct fields from the map value
 		}
 	}
+	for _, p := range m {
+    fmt.Printf("Name: %s %s, Favorite Ice Cream: %s", p.first, p.last, p.favIceCream) }
 }
 
 /*
