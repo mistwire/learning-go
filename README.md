@@ -29,6 +29,10 @@ Each lesson file includes inline annotations and a `REMARKS` section at the bott
 | 129-132 | Struct Exercises | structs with slice fields, `map[string]struct`, embedded structs, anonymous structs with composite fields |
 | 133-134 | Function Syntax | `func`, parameters vs arguments, returns, multiple return values, named returns, pass by value |
 | 135-136 | Variadic & Unfurling | `...Type`, variadic as slice, unfurling slices `slice...`, `fmt.Println` is variadic |
+| 137 | Defer | `defer`, LIFO stack, deferred cleanup, resource management |
+| 138 | Methods | receiver `(r Type)`, value receiver, dot notation, methods on named types |
+| 139 | Interfaces & Polymorphism | `interface`, implicit satisfaction, method sets, polymorphic functions |
+| 140 | Stringer Interface | `fmt.Stringer`, `String() string`, `strconv.Itoa`, named types with methods |
 
 ## Running Examples
 
