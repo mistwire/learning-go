@@ -33,6 +33,7 @@ Each lesson file includes inline annotations and a `REMARKS` section at the bott
 | 138 | Methods | receiver `(r Type)`, value receiver, dot notation, methods on named types |
 | 139 | Interfaces & Polymorphism | `interface`, implicit satisfaction, method sets, polymorphic functions |
 | 140 | Stringer Interface | `fmt.Stringer`, `String() string`, `strconv.Itoa`, named types with methods |
+| 141 | Wrapper Functions | interface parameters, polymorphic functions, decoupling, "accept interfaces, return structs" |
 
 ## Running Examples
 

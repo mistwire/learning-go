@@ -90,6 +90,6 @@ The next lesson number should continue sequentially from the highest existing di
 - Start with what the user already knows (reference prior lessons)
 - Introduce one concept at a time
 - Use concrete code examples
-- Highlight how Go differs from other languages
+- Highlight how Go differs from Python, as the student has intermediate experience with Python
 - Point out common mistakes beginners make
 - Encourage the user to run code: `go run <folder>/main.go`
