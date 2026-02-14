@@ -34,6 +34,7 @@ Each lesson file includes inline annotations and a `REMARKS` section at the bott
 | 139 | Interfaces & Polymorphism | `interface`, implicit satisfaction, method sets, polymorphic functions |
 | 140 | Stringer Interface | `fmt.Stringer`, `String() string`, `strconv.Itoa`, named types with methods |
 | 141 | Wrapper Functions | interface parameters, polymorphic functions, decoupling, "accept interfaces, return structs" |
+| 142-143 | Writer Interface & Buffers | `io.Writer`, `os.File.Write`, `bytes.Buffer`, `WriteString`, `Reset`, polymorphism via interfaces |
 
 ## Running Examples
 
