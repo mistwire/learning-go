@@ -37,6 +37,9 @@ Each lesson file includes inline annotations and a `REMARKS` section at the bott
 | 142-143 | Writer Interface & Buffers | `io.Writer`, `os.File.Write`, `bytes.Buffer`, `WriteString`, `Reset`, polymorphism via interfaces |
 | 144 | io.Writer as Method Parameter | `io.Writer` on struct methods, polymorphic write to file or buffer, `[]byte()` conversion, `defer f.Close()` |
 | 145 | Anonymous Functions | function literals, immediately invoked `func(){}()`, parameters & arguments inline, closures preview |
+| 146 | Function Expressions | assigning `func` literals to variables, deferred execution, functions as first-class values |
+| 147 | Returning Functions | `func() func() int` return types, higher-order functions, `%T` to inspect function types |
+| 148 | Callbacks | passing `func` as argument, function type parameters, polymorphism via first-class functions |
 
 ## Running Examples
 
